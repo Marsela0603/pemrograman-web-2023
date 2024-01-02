@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body {
+            background-image: url("https://w0.peakpx.com/wallpaper/4/417/HD-wallpaper-frozen-powerpoint-background-disney-frozen-snowflake.jpg"); 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            display: none;
+            max-width: 300px;
+            max-height: 300px;
+            margin-top: 10px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid blue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select name="" id="imagePicker" onchange="tampilgambar()">
+            <option value="pilih">Pilih Gambar</option>
+            <option value="satu">Satu</option>
+            <option value="dua">Dua</option>
+            <option value="tiga">Tiga</option>
+            <option value="empat">Empat</option>
+            <option value="lima">Lima</option>
+            <option value="enam">Enam</option>
+        </select>
+        <img id="tampilan" alt="Preview">
+    </div>
+
+    <script>
+        function tampilgambar() {
+            const imagePicker = document.getElementById('imagePicker');
+            const select = imagePicker.value;
+            const tampilan = document.getElementById('tampilan');
+            const fotosatu = "Anna Frozen" + ".jpg";
+            const fotodua = "Elsa Frozen" + ".jpg";
+            const fototiga = "Kristoff Frozen" + ".jpg";
+            const fotoempat = "Olaf Frozen" + ".jpg";
+            const fotolima = "Bruni Frozen" + ".jpg";
+            const fotoenam = "Sven Frozen" + ".jpg";
+
+            let foto = 0;
+            if (select == "satu"){
+                tampilan.src = "https://i.pinimg.com/564x/1f/05/6f/1f056fc6c40e0793ee477b7159c750c7.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fotosatu);
+            } else if (select == "dua"){
+                tampilan.src = "https://i.pinimg.com/564x/7d/d3/0f/7dd30fe0139ceac3999847462f43c9b2.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fotodua);
+            } else if (select == "tiga"){
+                tampilan.src = "https://i.pinimg.com/564x/84/e3/17/84e317fb81a21c9a993599097fe71708.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fototiga);
+            } else if (select == "empat"){
+                tampilan.src = "https://i.pinimg.com/564x/dd/03/fe/dd03fed81dbbbe733ae623e2f73f29e2.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fotoempat);
+            } else if (select == "lima"){
+                tampilan.src = "https://i.pinimg.com/564x/af/14/18/af1418b00afc95adbb3caf8cc17a2fdc.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fotolima);
+            } else if (select == "enam"){
+                tampilan.src = "https://i.pinimg.com/564x/3a/fe/a1/3afea1b086338cbefdf98edf094d8cff.jpg";
+                tampilan.style.display = 'block';
+                alert("Anda memilih: " + fotoenam);
+            }
+        }
+    </script>
+</body>
+</html>

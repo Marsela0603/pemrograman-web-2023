@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarif Parkir</title>
+</head>
+<body>
+    <h1>Program Tarif Parkir</h1>
+   
+   <label for="jamMasuk">Jam masuk kendaraan : </label>
+   <input type="number" id="jamMasuk" onchange="hitungtarif()"> </input>
+   <br>
+   <br>
+   <label for="jamKeluar">Jam keluar kendaraan : </label>
+   <input type="number" id="jamKeluar" onchange="hitungtarif()"> </input>
+   <hr>
+   <p>Lama Parkir : <span id="durasi"></span></p>
+   <p>Tarif Parkir : <span id="totalBiaya"></span></p>
+
+   <script>
+    function hitungtarif(){
+        let jamMasuk = document.getElementById("jamMasuk").value;
+        let jamKeluar = document.getElementById("jamKeluar").value;
+
+        // Rumus lama parkir
+        let lamaparkir = jamKeluar - jamMasuk
+
+        let biayaAwal = 3000
+        let biayaTambahan = 1000
+        let totalBiaya = biayaAwal
+
+        // jika biaya parkir lebih dari 2 jam
+        if (lamaparkir > 2) {
+                totalBiaya = biayaAwal + (lamaparkir - 2) * biayaTambahan;
+        }
+        console.log("Tarif Parkir = " + totalBiaya);
+
+        let totalBiaya2 = document.getElementById("totalBiaya");
+        totalBiaya2.innerText = "Rp. " + totalBiaya;
+
+        let durasi = document.getElementById("durasi")
+        durasi.innerText = lamaparkir + "jam"
+    }
+</script>
+    
+</body>
+</html>

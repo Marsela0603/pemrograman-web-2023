@@ -1,0 +1,18 @@
+th, td {
+    padding: 6px;
+}
+th {
+    text-align: left;
+}
+body {
+    background-color: aliceblue;
+}
+.kotak {
+    width: 400px; height: 20px;
+}
+.tahun {
+    width: 80px; height: 20px;
+}
+fieldset {
+    width: 50%; margin: auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbox</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: aliceblue;
+    }
+    table {
+      width: 600px;
+      height: 500px;
+    }
+    .chat {
+      height: 40px;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 550px;
+      height: 30px;   
+      margin: 0 auto;
+    }
+    button {
+      margin: 0 auto;
+      height: 30px;
+    }
+    .tampilanchat {
+        margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <table border="2">
+    <tr>
+      <td colspan="2">
+        <p id="tampilanchat" class="tampilanchat"></p>
+      </td>
+    </tr>
+    <tr class="chat">
+      <td>
+        <input type="text" id="inputchat" placeholder="Tulis pesan...">
+      </td>
+      <td>
+        <button onclick="kirim()">
+          Kirim
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function kirim() {
+      let message = document.getElementById("inputchat").value;
+      let tampilanchat= document.getElementById("tampilanchat");
+
+      tampilanchat.innerHTML += "<br>" + message;
+
+      document.getElementById("inputchat").value = "";
+    }
+  </script>
+</body>
+</html>

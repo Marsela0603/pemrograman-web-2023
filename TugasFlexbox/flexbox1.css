@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display:flex;
+}
+.main {
+    display:flex;
+    height: 330px;
+}
+nav {
+    background-color: lightcoral;
+    width: 200px;
+}
+article {
+    background-color: white;
+    width: 800px;
+}
+aside {
+    background-color: cyan;
+    width: 200px;
+}
+header, footer {
+    background-color: khaki;
+    height: 100px;
+    margin-top: 0;
+}
+body {
+    margin: 0;
+}
+header, footer, nav, aside, article {
+    padding: 1em;
+}
